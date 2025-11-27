@@ -1,11 +1,125 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr"> <!-- Changé pour français si c'est le public cible -->
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <meta name="description" content="Site web CIT - Page d'accueil"> <!-- Ajout pour le SEO -->
+    <title>CIT - Site Officiel</title> <!-- Titre plus descriptif -->
+    <link rel="stylesheet" href="styles.css"> <!-- Lien vers une feuille de style externe -->
 </head>
 <body>
-    
+    <div class="container">
+        <!-- En-tête principal -->
+        <header role="banner">
+            <h1>Youssef EL KROUK  Store hh</h1> <!-- Texte plus professionnel -->
+        </header>
+         
+        <!-- Contenu principal -->
+        <main role="main">
+            <!-- Section introduction -->
+            <section aria-labelledby="intro-title">
+                <h2 id="intro-title" style="display: none;">Introduction</h2> <!-- Pour l'accessibilité -->
+                <p> Welcome </p> <!-- Correction de "zmet" à "amet" -->
+                
+                <!-- Lien externe -->
+                <p>
+                    <a href="https://www.google.com/" target="_blank" rel="noopener noreferrer" 
+                       title="Ouvrir Google dans un nouvel onglet">
+                        Visiter Google
+                    </a>
+                </p>
+                
+                <!-- Image avec attributs améliorés -->
+                <figure>
+                    <img src="WhatsApp Image 2025-11-26 à 21.12.59_b4ab149f.jpg " 
+                         alt="Description de l'image" 
+                         width="400" 
+                         height="300"
+                         loading="lazy"> <!-- Optimisation chargement -->
+                    <figcaption>Légende de l'image</figcaption> <!-- Optionnel -->
+                </figure>
+            </section>
+
+            <!-- Section tableau -->
+            <section aria-labelledby="table-title">
+                <h2 id="table-title">Liste des Utilisateurs</h2>
+                <table>
+                    <thead>
+                        <tr>
+                            <th scope="col">Prénom</th> <!-- scope pour accessibilité -->
+                            <th scope="col">Nom</th>
+                            <th scope="col">Âge</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Exemple</td>
+                            <td>Nom</td>
+                            <td>25</td>
+                        </tr>
+                        <!-- Ajouter d'autres lignes si nécessaire -->
+                    </tbody>
+                </table>
+            </section>
+
+            <!-- Section listes -->
+            <section aria-labelledby="lists-title">
+                <h2 id="lists-title">Technologies Web</h2>
+                
+                <div style="display: flex; gap: 50px;">
+                    <div>
+                        <h3>Technologies prioritaires :</h3>
+                        <ol>
+                            <li>HTML</li>
+                            <li>CSS</li>
+                            <li>JavaScript</li>
+                        </ol>
+                    </div>
+                    
+                    <div>
+                        <h3>Toutes les technologies :</h3>
+                        <ul>
+                            <li>HTML</li>
+                            <li>CSS</li>
+                            <li>JavaScript</li>
+                            <li>Introduction to ML and AI  </li> <!-- Correction orthographe -->
+                        </ul>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Section formulaire -->
+            <section aria-labelledby="form-title">
+                <h2 id="form-title">Formulaire de Contact</h2>
+                
+                <form action="/submit" method="POST"> <!-- Action et méthode spécifiées -->
+                    <div>
+                        <label for="firstName">Prénom :</label>
+                        <input type="text" id="firstName" name="firstName" 
+                               placeholder="Votre prénom" required>
+                    </div>
+                    
+                    <div>
+                        <label for="lastName">Nom :</label>
+                        <input type="text" id="lastName" name="lastName" 
+                               placeholder="Votre nom" required>
+                    </div>
+                    
+                    <div>
+                        <label for="age">Âge :</label>
+                        <input type="number" id="age" name="age" 
+                               placeholder="Votre âge" min="1" max="120">
+                    </div>
+                    
+                    <button type="submit">Soumettre</button> <!-- Meilleur que input submit -->
+                </form>
+            </section>
+        </main>
+
+        <!-- Pied de page -->
+        <footer role="contentinfo" style="margin-top: 40px; text-align: center; padding: 20px;">
+            <p>&copy; 2024 CIT. Tous droits réservés.</p>
+        </footer>
+    </div>
 </body>
 </html>
